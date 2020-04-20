@@ -53,13 +53,13 @@ public class CircularLinkedList<T> {
     }
 
     public void add(int index, T data){
-        if(index<0 || index>=size){
+        if(index<0 || index>size){
             throw new IndexOutOfBoundsException("Index : " + index + ", Size : " + size);
         }
 
         if(index==0){
             addFirst(data);
-        }else if(index == size-1){
+        }else if(index == size){
             addLast(data);
         }else{
             Node currentNode = CL;

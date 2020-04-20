@@ -81,6 +81,7 @@ public class DataStructureMain {
 
 
         //CircularLinkedList
+/*
         CircularLinkedList<Integer> list = new CircularLinkedList<>();
         list.delete(2);
         list.addFirst(50);
@@ -88,6 +89,11 @@ public class DataStructureMain {
         list.addFirst(30);
         System.out.println(list.toString());
         System.out.println(list.size());
+
+        list.add(2, 999);
+        System.out.println(list.toString());
+        System.out.println(list.size());
+
 
         list.addLast(60);
         list.addLast(70);
@@ -107,6 +113,44 @@ public class DataStructureMain {
         list.delete(2);
         System.out.println(list.toString());
         System.out.println(list.size());
+        */
+
+        //DoublyCircularLinkedList
+
+        DoublyCircularLinkedList<Integer> list = new DoublyCircularLinkedList<>();
+
+        list.addFirst(3);
+        list.addLast(5);
+        System.out.println(list.toString());
+        System.out.println(list.size());
+        list.add(1,4);
+        System.out.println(list.toString());
+        System.out.println(list.size());
+
+        list.addLast(6);
+        list.addLast(7);
+        list.addLast(8);
+        System.out.println(list.toString());
+        System.out.println(list.size());
+
+        list.deleteFirst();
+        System.out.println(list.toString());
+        System.out.println(list.size());
+
+        list.deleteLast();
+        System.out.println(list.toString());
+        System.out.println(list.size());
+
+        list.delete(1);
+        System.out.println(list.toString());
+        System.out.println(list.size());
+
+        list.delete(1);
+        System.out.println(list.toString());
+        System.out.println(list.size());
+
+
+
 
 
     }
