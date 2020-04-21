@@ -116,7 +116,7 @@ public class DataStructureMain {
         */
 
         //DoublyCircularLinkedList
-
+/*
         DoublyCircularLinkedList<Integer> list = new DoublyCircularLinkedList<>();
 
         list.addFirst(3);
@@ -148,7 +148,23 @@ public class DataStructureMain {
         list.delete(1);
         System.out.println(list.toString());
         System.out.println(list.size());
+*/
 
+        //Stack
+        Stack<String> stack = new Stack<>(3);
+
+        stack.push("test1");
+        stack.push("test2");
+        stack.push("test3");
+        stack.printStack();
+
+        System.out.println(stack.peek());
+        System.out.println(stack.pop());
+        System.out.println(stack.peek());
+        stack.printStack();
+
+        stack.delete();
+        stack.printStack();
 
 
 

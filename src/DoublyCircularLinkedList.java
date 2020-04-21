@@ -19,7 +19,6 @@ public class DoublyCircularLinkedList<T> {
         }
     }
 
-
     public void addFirst(T data){
         if(head==null){
             Node newNode = new Node(data);
