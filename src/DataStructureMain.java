@@ -149,7 +149,7 @@ public class DataStructureMain {
         System.out.println(list.toString());
         System.out.println(list.size());
 */
-
+/*
         //Stack
         Stack<String> stack = new Stack<>(3);
 
@@ -165,9 +165,32 @@ public class DataStructureMain {
 
         stack.delete();
         stack.printStack();
+*/
 
+        //Queue
+        Queue<String> q = new Queue<>(3);
+        q.push("test1");
+        q.push("test2");
+        q.printQueue();
+        q.push("test3");
+        q.printQueue();
+        q.push("test4");
+        q.printQueue();
+        System.out.println(q.pop());
+        q.printQueue();
+        q.push("test5");
+        q.printQueue();
+        q.push("test6");
+        q.printQueue();
 
+        System.out.println(q.peak());
+        q.pop();
+        System.out.println(q.peak());
+        q.pop();
+        q.pop();
+        q.printQueue();
 
-
+        q.push("test7");
+        q.printQueue();
     }
 }
