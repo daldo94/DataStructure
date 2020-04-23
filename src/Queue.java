@@ -1,8 +1,8 @@
 public class Queue<T> {
-    int front;
-    int rear;
-    int size;
-    T[] queue;
+    private int front;
+    private int rear;
+    private int size;
+    private T[] queue;
 
     public Queue(int size){
         this.queue = (T[]) new Object[size];

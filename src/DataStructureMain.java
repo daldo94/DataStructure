@@ -166,7 +166,7 @@ public class DataStructureMain {
         stack.delete();
         stack.printStack();
 */
-
+/*
         //Queue
         Queue<String> q = new Queue<>(3);
         q.push("test1");
@@ -192,5 +192,38 @@ public class DataStructureMain {
 
         q.push("test7");
         q.printQueue();
+ */
+        //CircularQueue
+        CircularQueue<String> queue = new CircularQueue<>(4);
+
+        queue.push("test1");
+        queue.printQueue();
+
+        queue.push("test2");
+        queue.printQueue();
+
+        queue.push("test3");
+        queue.printQueue();
+
+        queue.push("test4");
+        queue.printQueue();
+
+
+        System.out.println(queue.peak());
+        System.out.println(queue.size());
+        System.out.println(queue.pop());
+        queue.printQueue();
+        System.out.println(queue.size());
+
+
+        queue.push("test5");
+        queue.printQueue();
+        queue.push("test6");
+        System.out.println(queue.size());
+
+        System.out.println(queue.pop());
+        queue.printQueue();
+        System.out.println(queue.peak());
+
     }
 }
