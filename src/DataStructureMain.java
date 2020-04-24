@@ -194,6 +194,7 @@ public class DataStructureMain {
         q.printQueue();
  */
         //CircularQueue
+        /*
         CircularQueue<String> queue = new CircularQueue<>(4);
 
         queue.push("test1");
@@ -224,6 +225,27 @@ public class DataStructureMain {
         System.out.println(queue.pop());
         queue.printQueue();
         System.out.println(queue.peak());
+*/
+        //Deque
+        Deque<String> deque = new Deque<>(4);
+        deque.push_front("test1");
+        deque.push_front("test2");
+        deque.printDeque();
+        deque.pop_back();
+        deque.printDeque();
+        deque.push_back("test3");
+        deque.printDeque();
+        deque.push_front("test4");
+        deque.printDeque();
+        System.out.println(deque.front());
+        System.out.println(deque.back());
+        System.out.println(deque.size());
+        deque.pop_front();
+        deque.printDeque();
+        deque.push_front("test4");
+        deque.push_front("test5");
+        deque.push_front("test6");
+        deque.printDeque();
 
     }
 }
