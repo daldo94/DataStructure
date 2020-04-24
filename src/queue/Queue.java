@@ -1,3 +1,5 @@
+package queue;
+
 public class Queue<T> {
     private int front;
     private int rear;
@@ -25,7 +27,7 @@ public class Queue<T> {
         if(!isFull()){
             queue[++rear] = data;
         }else{
-            System.out.println("Queue Status : Full");
+            System.out.println("queue.Queue Status : Full");
         }
     }
 
@@ -45,14 +47,14 @@ public class Queue<T> {
             }
             return data;
         }else{
-            System.out.println("Queue Status : Empty");
+            System.out.println("queue.Queue Status : Empty");
             return null;
         }
     }
 
     public T peak(){
         if(isEmpty()){
-            System.out.println("Queue Status : Empty");
+            System.out.println("queue.Queue Status : Empty");
             return null;
         }else {
             return queue[front + 1];
@@ -69,9 +71,9 @@ public class Queue<T> {
 
     public void printQueue(){
         if(isEmpty()){
-            System.out.println("Queue Status : Empty");
+            System.out.println("queue.Queue Status : Empty");
         }else{
-            System.out.println(":::Queue:::");
+            System.out.println(":::queue.Queue:::");
             for(int i=0; i<=rear; i++){
                 System.out.println(queue[i]);
             }

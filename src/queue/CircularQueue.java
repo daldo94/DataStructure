@@ -1,3 +1,5 @@
+package queue;
+
 public class CircularQueue<T> {
     private int front;
     private int rear;
@@ -20,7 +22,7 @@ public class CircularQueue<T> {
     }
     public void push(T data){
         if(isFull()){
-            System.out.println("Queue Status : Full");
+            System.out.println("queue.Queue Status : Full");
         }else{
             rear = (++rear)%size;
             queue[rear] = data;
@@ -28,7 +30,7 @@ public class CircularQueue<T> {
     }
     public T pop(){
         if(isEmpty()){
-            System.out.println("Queue Status : Empty");
+            System.out.println("queue.Queue Status : Empty");
             return null;
         }else{
             T data = null;
@@ -56,7 +58,7 @@ public class CircularQueue<T> {
 
     public void printQueue(){
 
-        System.out.println(":::Queue:::");
+        System.out.println(":::queue.Queue:::");
         for(int i=0; i<size; i++){
             System.out.println(queue[i]);
         }

@@ -1,11 +1,13 @@
-public class Deque<T> {
+package deque;
+
+public class ArrayDeque<T> implements Deque<T> {
     private int front;
     private int rear;
     private T[] deque;
     private int dequeSize;
     private int itemCount;
 
-    public Deque(int dequeSize){
+    public ArrayDeque(int dequeSize){
         this.dequeSize = dequeSize;
         this.itemCount = 0;
         this.front = 0;
@@ -17,10 +19,12 @@ public class Deque<T> {
         return dequeSize==itemCount;
     }
 
+    @Override
     public boolean isEmpty(){
         return itemCount==0;
     }
 
+    @Override
     public void push_front(T data){
         if(isFull()) System.out.println("Deque Status : Full");
         else{
@@ -30,6 +34,7 @@ public class Deque<T> {
         }
     }
 
+    @Override
     public void push_back(T data){
         if(isFull()) System.out.println("Deque Status : Full");
         else{
@@ -39,6 +44,7 @@ public class Deque<T> {
         }
     }
 
+    @Override
     public T pop_front(){
         if(isEmpty()){
             System.out.println("Deque Status : Empty");
@@ -50,6 +56,7 @@ public class Deque<T> {
         }
     }
 
+    @Override
     public T pop_back(){
         if(isEmpty()){
             System.out.println("Deque Status : Empty");
@@ -61,6 +68,7 @@ public class Deque<T> {
         }
     }
 
+    @Override
     public T front(){
         if(isEmpty()){
             System.out.println("Deque Status : Empty");
@@ -70,6 +78,7 @@ public class Deque<T> {
         }
     }
 
+    @Override
     public T back(){
         if(isEmpty()){
             System.out.println("Deque Status : Empty");
@@ -79,10 +88,12 @@ public class Deque<T> {
         }
     }
 
+    @Override
     public int size(){
         return itemCount;
     }
 
+    @Override
     public void printDeque(){
         int tempFront = front;
         System.out.println(":::Deque:::");

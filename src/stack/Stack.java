@@ -1,3 +1,5 @@
+package stack;
+
 public class Stack<T> {
     int top;
     T[] stack;
@@ -19,7 +21,7 @@ public class Stack<T> {
 
     public void push(T item){
         if(isFull()){
-            System.out.println("Stack Status : full");
+            System.out.println("stack.Stack Status : full");
         }else{
             stack[++top] = item;
         }
@@ -27,7 +29,7 @@ public class Stack<T> {
 
     public T pop(){
         if(isEmpty()){
-            System.out.println("Stack Status : empty");
+            System.out.println("stack.Stack Status : empty");
             return null;
         }else{
             return stack[top--];
@@ -36,7 +38,7 @@ public class Stack<T> {
 
     public void delete(){
         if(isEmpty()){
-            System.out.println("Stack Status : empty");
+            System.out.println("stack.Stack Status : empty");
         }else{
             top--;
         }
@@ -44,7 +46,7 @@ public class Stack<T> {
 
     public T peek(){
         if(isEmpty()){
-            System.out.println("Stack Status : empty");
+            System.out.println("stack.Stack Status : empty");
             return null;
         }else{
             return stack[top];
@@ -53,9 +55,9 @@ public class Stack<T> {
 
     public void printStack(){
         if(isEmpty()){
-            System.out.println("Stack Status : empty");
+            System.out.println("stack.Stack Status : empty");
         }else{
-            System.out.println("<< Stack >>");
+            System.out.println("<< stack.Stack >>");
             for(int i=top; i>-1; i--){
                 System.out.println(stack[i]);
             }

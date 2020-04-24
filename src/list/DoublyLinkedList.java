@@ -1,3 +1,6 @@
+package list;
+
+
 public class DoublyLinkedList<T> {
     private Node head;
     private Node tail;
@@ -94,7 +97,11 @@ public class DoublyLinkedList<T> {
             Node removeNode = head;
             head = null;
             head = removeNode.next;
-            head.prev = null;
+            if(head!=null){
+                head.prev = null;
+            }else{
+                tail=null;
+            }
             size--;
 
             return removeNode.data;
@@ -108,7 +115,11 @@ public class DoublyLinkedList<T> {
             Node removeNode = tail;
             tail = null;
             tail = removeNode.prev;
-            tail.next = null;
+            if(tail!=null){
+                tail.next = null;
+            }else{
+                head=null;
+            }
             size--;
 
             return removeNode.data;

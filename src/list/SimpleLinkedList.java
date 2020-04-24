@@ -1,3 +1,5 @@
+package list;
+
 public class SimpleLinkedList<T> {
     private Node header;
     private int size;

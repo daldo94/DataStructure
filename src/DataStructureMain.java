@@ -1,10 +1,13 @@
-
+import deque.ArrayDeque;
+import deque.Deque;
+import deque.ListDeque;
+import list.DoublyLinkedList;
 
 public class DataStructureMain {
     public static void main(String[] args) {
-        //ArrayList
+        //List.ArrayList
         /*
-        ArrayList<Integer> testArray = new ArrayList<>();
+        List.ArrayList<Integer> testArray = new List.ArrayList<>();
 
         testArray.add(31);
         testArray.add(42);
@@ -26,9 +29,9 @@ public class DataStructureMain {
         System.out.println(testArray.indexOf(52));
         */
 
-        //SimpleLinkedList
+        //List.SimpleLinkedList
         /*
-        SimpleLinkedList<Integer> list = new SimpleLinkedList<>();
+        List.SimpleLinkedList<Integer> list = new List.SimpleLinkedList<>();
 
         list.add(100);
         list.add(200);
@@ -53,9 +56,9 @@ public class DataStructureMain {
         System.out.println("크기 : " + list.size());
         */
 
-        //DoublyLinkedList
+        //List.DoublyLinkedList
         /*
-        DoublyLinkedList<Integer> list = new DoublyLinkedList<>();
+        List.DoublyLinkedList<Integer> list = new List.DoublyLinkedList<>();
 
         list.addFirst(60);
         list.addFirst(50);
@@ -80,9 +83,9 @@ public class DataStructureMain {
         */
 
 
-        //CircularLinkedList
+        //List.CircularLinkedList
 /*
-        CircularLinkedList<Integer> list = new CircularLinkedList<>();
+        List.CircularLinkedList<Integer> list = new List.CircularLinkedList<>();
         list.delete(2);
         list.addFirst(50);
         list.addFirst(40);
@@ -115,9 +118,9 @@ public class DataStructureMain {
         System.out.println(list.size());
         */
 
-        //DoublyCircularLinkedList
+        //List.DoublyCircularLinkedList
 /*
-        DoublyCircularLinkedList<Integer> list = new DoublyCircularLinkedList<>();
+        List.DoublyCircularLinkedList<Integer> list = new List.DoublyCircularLinkedList<>();
 
         list.addFirst(3);
         list.addLast(5);
@@ -150,8 +153,8 @@ public class DataStructureMain {
         System.out.println(list.size());
 */
 /*
-        //Stack
-        Stack<String> stack = new Stack<>(3);
+        //stack.Stack
+        stack.Stack<String> stack = new stack.Stack<>(3);
 
         stack.push("test1");
         stack.push("test2");
@@ -167,8 +170,8 @@ public class DataStructureMain {
         stack.printStack();
 */
 /*
-        //Queue
-        Queue<String> q = new Queue<>(3);
+        //queue.Queue
+        queue.Queue<String> q = new queue.Queue<>(3);
         q.push("test1");
         q.push("test2");
         q.printQueue();
@@ -193,9 +196,9 @@ public class DataStructureMain {
         q.push("test7");
         q.printQueue();
  */
-        //CircularQueue
+        //queue.CircularQueue
         /*
-        CircularQueue<String> queue = new CircularQueue<>(4);
+        queue.CircularQueue<String> queue = new queue.CircularQueue<>(4);
 
         queue.push("test1");
         queue.printQueue();
@@ -226,26 +229,66 @@ public class DataStructureMain {
         queue.printQueue();
         System.out.println(queue.peak());
 */
-        //Deque
-        Deque<String> deque = new Deque<>(4);
-        deque.push_front("test1");
-        deque.push_front("test2");
-        deque.printDeque();
-        deque.pop_back();
-        deque.printDeque();
-        deque.push_back("test3");
-        deque.printDeque();
-        deque.push_front("test4");
-        deque.printDeque();
-        System.out.println(deque.front());
-        System.out.println(deque.back());
-        System.out.println(deque.size());
-        deque.pop_front();
-        deque.printDeque();
-        deque.push_front("test4");
-        deque.push_front("test5");
-        deque.push_front("test6");
-        deque.printDeque();
+        //Array Deque
+        /*
+        ArrayDeque<String> arrayDeque = new ArrayDeque<>(4);
+        arrayDeque.push_front("test1");
+        arrayDeque.push_front("test2");
+        arrayDeque.printDeque();
+        arrayDeque.pop_back();
+        arrayDeque.printDeque();
+        arrayDeque.push_back("test3");
+        arrayDeque.printDeque();
+        arrayDeque.push_front("test4");
+        arrayDeque.printDeque();
+        System.out.println(arrayDeque.front());
+        System.out.println(arrayDeque.back());
+        System.out.println(arrayDeque.size());
+        arrayDeque.pop_front();
+        arrayDeque.printDeque();
+        arrayDeque.push_front("test4");
+        arrayDeque.push_front("test5");
+        arrayDeque.push_front("test6");
+        arrayDeque.printDeque();
+        */
+
+        //ListDeque
+
+        Deque<String> listDeque = new ListDeque<>();
+        listDeque.push_front("test1");
+        listDeque.push_front("test2");
+        listDeque.printDeque();
+        listDeque.push_back("test3");
+        listDeque.push_back("test4");
+        listDeque.printDeque();
+
+        System.out.println(listDeque.front());
+        System.out.println(listDeque.back());
+
+        System.out.println(listDeque.pop_front());
+        listDeque.printDeque();
+        System.out.println(listDeque.pop_back());
+        listDeque.printDeque();
+        listDeque.push_back("test9");
+        listDeque.printDeque();
+        System.out.println(listDeque.back());
+        System.out.println(listDeque.pop_back());
+        listDeque.printDeque();
+        System.out.println(listDeque.pop_back());
+        listDeque.printDeque();
+        System.out.println(listDeque.front());
+        System.out.println(listDeque.pop_back());
+
+        listDeque.printDeque();
+        listDeque.push_front("test10");
+        listDeque.printDeque();
+        listDeque.push_back("test11");
+        listDeque.printDeque();
+        System.out.println(listDeque.front() + " " + listDeque.back());
+        listDeque.push_front("test12");
+        listDeque.printDeque();
+        listDeque.push_back("test13");
+        listDeque.printDeque();
 
     }
 }
