@@ -77,6 +77,7 @@ public class ArrayList<T> {
         return idx;
     }
 
+    //원소의 갯수가 아니라 배열의 크기
     public int size(){
         return this.size;
     }

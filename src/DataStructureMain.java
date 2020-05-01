@@ -1,6 +1,7 @@
 import deque.ArrayDeque;
 import deque.Deque;
 import deque.ListDeque;
+import graph.AdjListGraph;
 import graph.AdjMatrixGraph;
 import graph.Graph;
 import list.DoublyLinkedList;
@@ -292,6 +293,8 @@ public class DataStructureMain {
         listDeque.push_back("test13");
         listDeque.printDeque();*/
 
+/*
+        //AdjMatrixGraph
         Graph graph = new AdjMatrixGraph(3);
 
         graph.printGraph();
@@ -302,5 +305,16 @@ public class DataStructureMain {
         graph.printGraph();
         graph.deleteEdge(2,3);
         graph.printGraph();
+  */
+
+        //AdjListGraph
+        Graph graph = new AdjListGraph(5);
+        graph.printGraph();
+        graph.addEdge(1,3);
+        graph.addEdgeWithWeight(1,4,5);
+        graph.printGraph();
+        graph.deleteEdge(1,3);
+        graph.printGraph();
+        graph.deleteEdge(1,3);
     }
 }

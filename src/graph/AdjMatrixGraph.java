@@ -39,7 +39,7 @@ public class AdjMatrixGraph implements Graph {
         to = to - 1;
         if(!isInside(from,to)){
             System.out.println("Check Graph Node Num : Index Out of Bound");
-        }else if(adjMatrix[from][to]==0){
+        }else if(!isLinked(from+1, to+1)){
             System.out.println("Check Graph Node Num : No Such Edge");
         }else{
             adjMatrix[from][to]=0;
