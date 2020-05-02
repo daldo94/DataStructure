@@ -4,7 +4,11 @@ import deque.ListDeque;
 import graph.AdjListGraph;
 import graph.AdjMatrixGraph;
 import graph.Graph;
+
 import list.DoublyLinkedList;
+import tree.Tree;
+
+import java.util.ArrayList;
 
 public class DataStructureMain {
     public static void main(String[] args) {
@@ -308,6 +312,7 @@ public class DataStructureMain {
   */
 
         //AdjListGraph
+        /*
         Graph graph = new AdjListGraph(5);
         graph.printGraph();
         graph.addEdge(1,3);
@@ -316,5 +321,22 @@ public class DataStructureMain {
         graph.deleteEdge(1,3);
         graph.printGraph();
         graph.deleteEdge(1,3);
+         */
+
+        Tree<String> tree = new Tree<>("tree1");
+
+        tree.addChild("tree1","tree2");
+        tree.addChild("tree1","tree3");
+        tree.addChild("tree1","tree4");
+        tree.addChild("tree4","tree5");
+        tree.addChild("tree5","tree8");
+        tree.printTree();
+
+        tree.printDataUsingLevel(3);
+        System.out.println(tree.getTreeDepth());
+        tree.addChild("tree8","tree9");
+        tree.printDataUsingLevel(3);
+        System.out.println(tree.getTreeDepth());
+        tree.printTree();
     }
 }
